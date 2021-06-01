@@ -35,4 +35,5 @@ mongoose.connection.on("error", (error) => {
 
 process.on("SIGINT", function () {
     mongoose.connection.close();
+    process.exit(1);
 });

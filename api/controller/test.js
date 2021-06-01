@@ -1,9 +1,8 @@
 import { createToken } from "../helper/jwt";
-import { createResponse } from "../helper/responseBody";
 import { SampleWorker } from "./../worker/sample";
 
 const healthCheck = (req, res, next) => {
-  console.log("Inside here");
+  // console.log("Inside here");
   res.body = {
     data: "server health is ok",
   };
@@ -18,7 +17,7 @@ const healthErrorCheck = (req, res, next) => {
 };
 
 const tokenHealth = async (req, res, next) => {
-  console.log("Token health controller");
+  // console.log("Token health controller");
 
   res.body = await SampleWorker.getTestData();
   next();

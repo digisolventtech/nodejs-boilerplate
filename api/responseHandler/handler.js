@@ -28,7 +28,7 @@ export const resHandler = (res, data, error, message)=> {
             statusCode: errorDetails.status 
         }
 
-        console.log('errorDetails.status ', errorDetails.status);
+        // console.log('errorDetails.status ', errorDetails.status);
 
         return res.status( errorDetails.status || 500).json(obj);
     }

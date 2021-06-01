@@ -1,7 +1,6 @@
 import { resolve } from "path";
 import { readdirSync } from "fs";
-import { createResponse } from "../helper/responseBody";
-import { resHandler } from "../responseHnadler/handler";
+import { resHandler } from "../responseHandler/handler";
 import { middleware } from "./../middleware";
 
 export const initRoute = async (app) => {
@@ -16,7 +15,7 @@ export const initRoute = async (app) => {
     if (file == "index.js") {
       continue;
     }
-    console.log("File name: ", file);
+    // console.log("File name: ", file);
     const allRoutes = await import(resolve(__dirname, `${file}`));
 
     /*
@@ -49,7 +48,6 @@ export const initRoute = async (app) => {
   }
 
   app.use("*", (req, res, next) => {
-    console.log("path match ", res.body);
     if (!req.route || (req.route && !req.route.path)) {
       const { method, originalUrl } = req;
       const message = `Cannot match ${method}:${originalUrl}`;

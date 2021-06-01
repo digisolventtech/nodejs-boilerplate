@@ -12,7 +12,7 @@ export const decodeToken = (token) => {
   try {
     return JWT.verify(token, process.env.JWT_TOKEN_KEY || "11XS#@QWEREF");
   } catch (err) {
-    console.log("Token error: ", err);
+    // console.log("Token error: ", err);
     throw err;
   }
 };

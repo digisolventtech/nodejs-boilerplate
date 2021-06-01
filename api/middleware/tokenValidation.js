@@ -11,8 +11,7 @@ export const TokenValidation = (req, res, next)=> {
         // console.log('Token is: ', req.headers[tokenFieldName]);
         try {
             const token = decodeToken(req.headers[tokenFieldName]);
-            console.log('Data: ', token);
-            //do your code here based on token
+            //do your code here..
             next();
         } catch(err) {
             next('invalid_token');
