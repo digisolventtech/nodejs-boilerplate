@@ -9,7 +9,7 @@ export const resHandler = (res, data, error, message)=> {
             data: data,
             statusCode: 200
         }
-        return res.status(http.STATUS_CODES[200]).send(obj);
+        return res.status(200).send(obj);
     } 
 
     if(error || !data) {

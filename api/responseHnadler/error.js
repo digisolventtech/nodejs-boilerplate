@@ -13,5 +13,10 @@ export const ERROR_CONSTANT = {
         status: 404,
         message: 'invalid path',
         error_code: 'invalid_path'
+    },
+    invalid_token: {
+        status: 401,
+        message: 'invalid user auth token',
+        error_code: 'invalid_token'
     }
 };

@@ -5,6 +5,7 @@ import Helmet from "helmet";
 import { routeInitialize } from "./config/router";
 
 import Colors from "colors";
+import { initDb } from "./config/db";
 
 const app = new Express();
 
@@ -15,6 +16,10 @@ console.log("Server Start initializing");
 module.exports = async () => {
   try {
     console.log(Colors.yellow("App initializing started"));
+
+    //init db
+    initDb(app);
+    
     //set cors
     cors(app);
 
