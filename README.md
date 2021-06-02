@@ -9,6 +9,11 @@
 4. testability
 5. performance
 
+# Suitable for
+1. Want to create server using node.js, express.js and mongodb
+2. If, you new or don't have time to invest on architecture
+3. If, you want to learn and explore architecture
+4. You can use this like framework
 # Features have
 1. MongoDb connection management
 2. JWT token authentication
