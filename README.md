@@ -147,12 +147,17 @@ a. PATH_PREFIX=digisolvent
 b. PORT=8080
 
 Get: http://localhost:8080/digisolvent/test/health( to check server is running )
+
 Get: http://localhost:8080/digisolvent/test/health-error (to check error handling working )
+
 Get: http://localhost:8080/digisolvent/test/check-token-header (to check token validation is working )
+
 Post: http://localhost:8080/digisolvent/test/test-token (to check token creation)
 
 
-                                  **|| If you liked, then give a star ||**
+
+
+                                             **|| If you liked, then give a star ||**
 
 
 
